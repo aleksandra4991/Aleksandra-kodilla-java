@@ -13,15 +13,15 @@ public class Main {
         System.out.println("Do Lublany możesz lecieć bezpośrednio z:");
         CombinationOfFlightsFromFewCities.getList()
                 .stream()
-                .filter(e->e.getDirectFlightTo().getDirectCityFlightTo().equals("Lublana"))
+                .filter(e -> e.getDirectFlightTo().getDirectCityFlightTo().equals("Lublana"))
                 .map(flights -> flights.getFlightFrom().getCityFlightFrom())
                 .forEach(System.out::println);
 
         //CombinationOfFlightsFromFewCities.getList()
-          //      .stream()
-            //    .allMatch(flights -> flights.getFlightFrom().getCityFlightFrom().equals("Warszawa")&&(flights.getDirectFlightTo().getDirectCityFlightTo().equals("Lublana")))
-
-        }
+        //      .stream()
+        //    .allMatch(flights -> flights.getFlightFrom().getCityFlightFrom().equals("Warszawa")&&(flights.getDirectFlightTo().getDirectCityFlightTo().equals("Lublana")))
 
     }
+
+}
 

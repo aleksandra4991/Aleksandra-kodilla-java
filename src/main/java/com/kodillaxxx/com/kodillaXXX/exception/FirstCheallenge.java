@@ -24,7 +24,7 @@ public class FirstCheallenge {
         } catch (ArithmeticException dividedBy0) {
             System.out.println("Unfortunately, it is impossilble to process this. Error: " + dividedBy0);
         } finally {
-            System.out.println("You tried to divide" );
+            System.out.println("You tried to divide");
         }
 
     }
