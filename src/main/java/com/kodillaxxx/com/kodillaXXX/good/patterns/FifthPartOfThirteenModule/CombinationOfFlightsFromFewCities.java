@@ -9,7 +9,7 @@ public final class CombinationOfFlightsFromFewCities {
         final List<Flights> flightsList = new ArrayList<>();
 
         FlightFrom flightFrom1 = new FlightFrom("Warsaw", 1);
-        FlightFrom flightFrom2 = new FlightFrom("Praha", 2);
+        FlightFrom flightFrom2 = new FlightFrom("Praga", 2);
         FlightFrom flightFrom3 = new FlightFrom("Roma", 3);
         FlightFrom flightFrom4 = new FlightFrom("Paris", 4);
         FlightFrom flightFrom5 = new FlightFrom("London", 5);
@@ -43,6 +43,7 @@ public final class CombinationOfFlightsFromFewCities {
         flightsList.add(new Flights(flightFrom5, directFlightTo7));
         flightsList.add(new Flights(flightFrom1, directFlightTo4));
         flightsList.add(new Flights(flightFrom6, directFlightTo10));
+        flightsList.add(new Flights(flightFrom1,directFlightTo10));
 
         return flightsList;
 
