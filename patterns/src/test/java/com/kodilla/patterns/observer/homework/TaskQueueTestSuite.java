@@ -10,16 +10,16 @@ public class TaskQueueTestSuite {
     public void testUpdate(){
 
         //Given
-        Student marekZbiec = new Student("Marek Zbiec");
-        Student haniaKoszarska = new Student("Hania Koszarska");
-        Student martaKrakowska = new Student("Marta Krakowska");;
+        Student student1 = new Student("Patryk Makowski");
+        Student student2 = new Student("Julia Wrona");
+        Student student3 = new Student("Aleksandra Radzikowska");
 
-        Mentor arekPieczarka = new Mentor ("Arek Pieczarka");
-        Mentor joasiaPiaseczna = new Mentor ("Joasia Piaseczna");
+        Mentor mentor1 = new Mentor ("Monika Pawłowska");
+        Mentor mentor2 = new Mentor ("Sebastian Kruk");
 
-        marekZbiec.becomeObserver(arekPieczarka);
-        haniaKoszarska.becomeObserver(joasiaPiaseczna);
-        martaKrakowska.becomeObserver(joasiaPiaseczna);
+        student1.becomeObserver(mentor1);
+        student2.becomeObserver(mentor2);
+        student3.becomeObserver(mentor2);
 
         Task task1 = new Task(1, "task1");
         Task task2 = new Task(2, "task2");
@@ -27,14 +27,14 @@ public class TaskQueueTestSuite {
 
 
         //When
-        marekZbiec.addDoneTask(task1);
-        haniaKoszarska.addDoneTask(task2);
-        martaKrakowska.addDoneTask(task3);
+        student1.addDoneTask(task1);
+        student2.addDoneTask(task2);
+        student3.addDoneTask(task3);
 
 
         //Then
-        assertEquals(1, arekPieczarka.getUpdateCounter());
-        assertEquals(2, joasiaPiaseczna.getUpdateCounter());
+        assertEquals(1, mentor1.getUpdateCounter());
+        assertEquals(2, mentor2.getUpdateCounter());
 
     }
 }
